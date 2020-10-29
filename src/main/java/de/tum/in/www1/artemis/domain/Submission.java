@@ -63,7 +63,7 @@ public abstract class Submission extends DomainObject {
      */
     @OneToMany(mappedBy = "submission", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties({ "submission", "participation" })
-    @OrderColumn(name = "result_order")
+    @OrderColumn
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private List<Result> results = new ArrayList<>();
 
