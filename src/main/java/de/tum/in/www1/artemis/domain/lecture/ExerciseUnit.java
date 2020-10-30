@@ -1,4 +1,4 @@
-package de.tum.in.www1.artemis.domain.lecture_unit;
+package de.tum.in.www1.artemis.domain.lecture;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -9,6 +9,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+
 import de.tum.in.www1.artemis.domain.Exercise;
 
 @Entity
