@@ -24,11 +24,11 @@ export class UpcomingExamsAndExercisesComponent implements OnInit {
 
     ngOnInit(): void {
         this.exerciseService.getUpcomingExercises().subscribe((res: ExerciseEntityArrayResponseType) => {
-            this.upcomingExercises = res.body ?? [];
+            this.upcomingExercises = res.body === null ? [] : res.body;
         });
 
         this.examManagementService.findAllCurrentAndUpcomingExams().subscribe((res: HttpResponse<Exam[]>) => {
-            this.upcomingExams = res.body ?? [];
+            this.upcomingExams = res.body === null ? [] : res.body;
         });
     }
 
